@@ -1,0 +1,498 @@
+Senator	Alabama	null	20442,20492,28796,28797,28798
+Congressman	Alabama	1	20769
+Congressman	Alabama	2	20770
+Congressman	Alabama	3	20771
+Congressman	Alabama	4	20772
+Congressman	Alabama	5	20773
+Congressman	Alabama	6	20774
+Congressman	Alabama	7	20775
+Senator	Alaska	null	20443,20493,28799,28800,28801
+Congressman	Alaska	null	20914
+Senator	Arizona	null	20444,20494,28802,28803,28804
+Congressman	Arizona	1	20975
+Congressman	Arizona	2	20694
+Congressman	Arizona	3	20976
+Congressman	Arizona	4	20977
+Congressman	Arizona	5	20978
+Congressman	Arizona	6	20979
+Congressman	Arizona	7	20980
+Congressman	Arizona	8	20981
+Congressman	Arizona	9	29548
+Senator	Arkansas	null	20445,20495,28805,28806,28807
+Congressman	Arkansas	1	21042
+Congressman	Arkansas	2	21043
+Congressman	Arkansas	3	21044
+Congressman	Arkansas	4	21045
+Senator	California	null	20446,20496,28808,28809,28810
+Congressman	California	1	21179
+Congressman	California	2	21180
+Congressman	California	3	21181
+Congressman	California	4	21182
+Congressman	California	5	21183
+Congressman	California	6	21184
+Congressman	California	7	21185
+Congressman	California	8	21186
+Congressman	California	9	21187
+Congressman	California	10	21188
+Congressman	California	11	21189
+Congressman	California	12	21190
+Congressman	California	13	21191
+Congressman	California	14	21192
+Congressman	California	15	21193
+Congressman	California	16	21194
+Congressman	California	17	21195
+Congressman	California	18	21196
+Congressman	California	19	21197
+Congressman	California	20	21198
+Congressman	California	21	21199
+Congressman	California	22	21200
+Congressman	California	23	21201
+Congressman	California	24	21202
+Congressman	California	25	21203
+Congressman	California	26	21204
+Congressman	California	27	21205
+Congressman	California	28	21206
+Congressman	California	29	21207
+Congressman	California	30	21208
+Congressman	California	31	21209
+Congressman	California	32	21210
+Congressman	California	33	21211
+Congressman	California	34	21212
+Congressman	California	35	21213
+Congressman	California	36	21214
+Congressman	California	37	21215
+Congressman	California	38	21216
+Congressman	California	39	21217
+Congressman	California	40	21218
+Congressman	California	41	21219
+Congressman	California	42	21220
+Congressman	California	43	21221
+Congressman	California	44	21222
+Congressman	California	45	21223
+Congressman	California	46	21224
+Congressman	California	47	21225
+Congressman	California	48	21226
+Congressman	California	49	21227
+Congressman	California	50	21228
+Congressman	California	51	21229
+Congressman	California	52	21230
+Congressman	California	53	21231
+Senator	Colorado	null	20447,20497,28811,28812,28813
+Congressman	Colorado	1	21350
+Congressman	Colorado	2	21351
+Congressman	Colorado	3	21352
+Congressman	Colorado	4	21353
+Congressman	Colorado	5	21354
+Congressman	Colorado	6	21355
+Congressman	Colorado	7	21356
+Senator	Connecticut	null	20448,20498,28814,28815,28816
+Congressman	Connecticut	1	21455
+Congressman	Connecticut	2	21456
+Congressman	Connecticut	3	21457
+Congressman	Connecticut	4	21458
+Congressman	Connecticut	5	21459
+Senator	Delaware	null	20449,20499,28817,28818,28819
+Congressman	Delaware	null	21644
+Congressman	District of Columbia	null	27818
+Senator	Florida	null	20450,20500,28820,28821,28822
+Congressman	Florida	1	21749
+Congressman	Florida	2	21750
+Congressman	Florida	3	21751
+Congressman	Florida	4	21752
+Congressman	Florida	5	21753
+Congressman	Florida	6	21754
+Congressman	Florida	7	21755
+Congressman	Florida	8	21756
+Congressman	Florida	9	21757
+Congressman	Florida	10	21758
+Congressman	Florida	11	21759
+Congressman	Florida	12	21760
+Congressman	Florida	13	21761
+Congressman	Florida	14	21762
+Congressman	Florida	15	21763
+Congressman	Florida	16	21764
+Congressman	Florida	17	21765
+Congressman	Florida	18	21766
+Congressman	Florida	19	21767
+Congressman	Florida	20	21768
+Congressman	Florida	21	21769
+Congressman	Florida	22	21770
+Congressman	Florida	23	21771
+Congressman	Florida	24	21772
+Congressman	Florida	25	21773
+Congressman	Florida	26	29542
+Congressman	Florida	27	29543
+Senator	Georgia	null	20451,20501,28823,28824,28825
+Congressman	Georgia	1	21932
+Congressman	Georgia	2	21933
+Congressman	Georgia	3	21934
+Congressman	Georgia	4	21935
+Congressman	Georgia	5	21936
+Congressman	Georgia	6	21937
+Congressman	Georgia	7	21938
+Congressman	Georgia	8	21939
+Congressman	Georgia	9	21940
+Congressman	Georgia	10	21941
+Congressman	Georgia	11	21942
+Congressman	Georgia	12	21943
+Congressman	Georgia	13	21944
+Congressman	Georgia	14	29541
+Senator	Hawaii	null	20452,20502,28826,28827,28828
+Congressman	Hawaii	1	22178
+Congressman	Hawaii	2	22179
+Senator	Idaho	null	20453,20503,28829,28830,28831
+Congressman	Idaho	1	22255
+Congressman	Idaho	2	22256
+Senator	Illinois	null	20454,20504,28832,28833,28834
+Congressman	Illinois	1	22326
+Congressman	Illinois	2	22327
+Congressman	Illinois	3	22328
+Congressman	Illinois	4	22329
+Congressman	Illinois	5	22330
+Congressman	Illinois	6	22331
+Congressman	Illinois	7	22332
+Congressman	Illinois	8	22333
+Congressman	Illinois	9	22334
+Congressman	Illinois	10	22335
+Congressman	Illinois	11	22336
+Congressman	Illinois	12	22337
+Congressman	Illinois	13	22338
+Congressman	Illinois	14	22339
+Congressman	Illinois	15	22340
+Congressman	Illinois	16	22341
+Congressman	Illinois	17	22342
+Congressman	Illinois	18	22343
+Congressman	Illinois	19	22344
+Senator	Indiana	null	20455,20505,28835,28836,28837
+Congressman	Indiana	1	22520
+Congressman	Indiana	2	22521
+Congressman	Indiana	3	22522
+Congressman	Indiana	4	22523
+Congressman	Indiana	5	22524
+Congressman	Indiana	6	20712
+Congressman	Indiana	7	22525
+Congressman	Indiana	8	22526
+Congressman	Indiana	9	22527
+Senator	Iowa	null	20456,20506,28838,28839,28840
+Congressman	Iowa	1	22677
+Congressman	Iowa	2	22678
+Congressman	Iowa	3	22679
+Congressman	Iowa	4	22680
+Congressman	Iowa	5	22681
+Senator	Kansas	null	20457,20507,28841,28842,28843
+Congressman	Kansas	1	22830
+Congressman	Kansas	2	22831
+Congressman	Kansas	3	22832
+Congressman	Kansas	4	22833
+Senator	Kentucky	null	20458,20508,28844,28845,28846
+Congressman	Kentucky	1	22996
+Congressman	Kentucky	2	22997
+Congressman	Kentucky	3	22998
+Congressman	Kentucky	4	22999
+Congressman	Kentucky	5	23000
+Congressman	Kentucky	6	23001
+Senator	Louisiana	null	20459,20509,28847,28848,28849
+Congressman	Louisiana	1	23138
+Congressman	Louisiana	2	23139
+Congressman	Louisiana	3	23140
+Congressman	Louisiana	4	23141
+Congressman	Louisiana	5	23142
+Congressman	Louisiana	6	23143
+Congressman	Louisiana	7	23144
+Senator	Maine	null	20460,20510,28850,28851,28852
+Congressman	Maine	1	23287
+Congressman	Maine	2	23288
+Senator	Maryland	null	20461,20511,28853,28854,28855
+Congressman	Maryland	1	23473
+Congressman	Maryland	2	20723
+Congressman	Maryland	3	23474
+Congressman	Maryland	4	23475
+Congressman	Maryland	5	23476
+Congressman	Maryland	6	23477
+Congressman	Maryland	7	23478
+Congressman	Maryland	8	23479
+Senator	Massachusetts	null	20462,20512,28856,28857,28858
+Congressman	Massachusetts	1	23591
+Congressman	Massachusetts	2	23592
+Congressman	Massachusetts	3	23593
+Congressman	Massachusetts	4	23594
+Congressman	Massachusetts	5	23595
+Congressman	Massachusetts	6	23596
+Congressman	Massachusetts	7	23597
+Congressman	Massachusetts	8	23598
+Congressman	Massachusetts	9	23599
+Congressman	Massachusetts	10	23600
+Senator	Michigan	null	20463,20513,28859,28860,28861
+Congressman	Michigan	1	23799
+Congressman	Michigan	2	23800
+Congressman	Michigan	3	23801
+Congressman	Michigan	4	23802
+Congressman	Michigan	5	23803
+Congressman	Michigan	6	23804
+Congressman	Michigan	7	23805
+Congressman	Michigan	8	23806
+Congressman	Michigan	9	23807
+Congressman	Michigan	10	23808
+Congressman	Michigan	11	23809
+Congressman	Michigan	12	23810
+Congressman	Michigan	13	23811
+Congressman	Michigan	14	23812
+Congressman	Michigan	15	23813
+Senator	Minnesota	null	20464,20514,28862,28863,28864
+Congressman	Minnesota	1	23960
+Congressman	Minnesota	2	23961
+Congressman	Minnesota	3	23962
+Congressman	Minnesota	4	23963
+Congressman	Minnesota	5	23964
+Congressman	Minnesota	6	23965
+Congressman	Minnesota	7	23966
+Congressman	Minnesota	8	23967
+Senator	Mississippi	null	20465,20515,28865,28866,28867
+Congressman	Mississippi	1	24167
+Congressman	Mississippi	2	24168
+Congressman	Mississippi	3	24169
+Congressman	Mississippi	4	24170
+Senator	Missouri	null	20466,20516,28868,28869,28870
+Congressman	Missouri	1	24343
+Congressman	Missouri	2	24344
+Congressman	Missouri	3	24345
+Congressman	Missouri	4	24346
+Congressman	Missouri	5	24347
+Congressman	Missouri	6	24348
+Congressman	Missouri	7	24349
+Congressman	Missouri	8	24350
+Congressman	Missouri	9	24351
+Senator	Montana	null	20467,20517,28871,28872,28873
+Congressman	Montana	null	24547
+Senator	Nebraska	null	20468,20518,28874,28875,28876
+Congressman	Nebraska	1	24696
+Congressman	Nebraska	2	24697
+Congressman	Nebraska	3	24698
+Senator	Nevada	null	20469,20519,28877,28878,28879
+Congressman	Nevada	1	24748
+Congressman	Nevada	2	24749
+Congressman	Nevada	3	24750
+Congressman	Nevada	4	29544
+Senator	New Hampshire	null	20470,20520,28880,28881,28882
+Congressman	New Hampshire	1	24810
+Congressman	New Hampshire	2	24811
+Senator	New Jersey	null	20471,20521,28883,28884,28885
+Congressman	New Jersey	1	24938
+Congressman	New Jersey	2	24939
+Congressman	New Jersey	3	24940
+Congressman	New Jersey	4	24941
+Congressman	New Jersey	5	24942
+Congressman	New Jersey	6	20737
+Congressman	New Jersey	7	24943
+Congressman	New Jersey	8	24944
+Congressman	New Jersey	9	24945
+Congressman	New Jersey	10	24946
+Congressman	New Jersey	11	24947
+Congressman	New Jersey	12	24948
+Congressman	New Jersey	13	24949
+Senator	New Mexico	null	20472,20522,28886,28887,28888
+Congressman	New Mexico	1	25030
+Congressman	New Mexico	2	25031
+Congressman	New Mexico	3	25032
+Senator	New York	null	20473,20523,28889,28890,28891
+Congressman	New York	1	25144
+Congressman	New York	2	25145
+Congressman	New York	3	25146
+Congressman	New York	4	25147
+Congressman	New York	5	25148
+Congressman	New York	6	25149
+Congressman	New York	7	25150
+Congressman	New York	8	25151
+Congressman	New York	9	25152
+Congressman	New York	10	25153
+Congressman	New York	11	25154
+Congressman	New York	12	25155
+Congressman	New York	13	25156
+Congressman	New York	14	25157
+Congressman	New York	15	25158
+Congressman	New York	16	25159
+Congressman	New York	17	25160
+Congressman	New York	18	25161
+Congressman	New York	19	25162
+Congressman	New York	20	25163
+Congressman	New York	21	25164
+Congressman	New York	22	25165
+Congressman	New York	23	25166
+Congressman	New York	24	25167
+Congressman	New York	25	25168
+Congressman	New York	26	25169
+Congressman	New York	27	25170
+Congressman	New York	28	25171
+Congressman	New York	29	25172
+Senator	North Carolina	null	20474,20524,28892,28893,28894
+Congressman	North Carolina	1	25382
+Congressman	North Carolina	2	25383
+Congressman	North Carolina	3	25384
+Congressman	North Carolina	4	25385
+Congressman	North Carolina	5	25386
+Congressman	North Carolina	6	25387
+Congressman	North Carolina	7	25388
+Congressman	North Carolina	8	25389
+Congressman	North Carolina	9	25390
+Congressman	North Carolina	10	25391
+Congressman	North Carolina	11	25392
+Congressman	North Carolina	12	25393
+Congressman	North Carolina	13	25394
+Senator	North Dakota	null	20475,20525,28895,28896,28897
+Congressman	North Dakota	null	25563
+Senator	Ohio	null	20476,20526,28898,28899,28900
+Congressman	Ohio	1	25657
+Congressman	Ohio	2	25658
+Congressman	Ohio	3	25659
+Congressman	Ohio	4	25660
+Congressman	Ohio	5	25661
+Congressman	Ohio	6	25662
+Congressman	Ohio	7	25663
+Congressman	Ohio	8	25664
+Congressman	Ohio	9	25665
+Congressman	Ohio	10	25666
+Congressman	Ohio	11	25667
+Congressman	Ohio	12	25668
+Congressman	Ohio	13	25669
+Congressman	Ohio	14	25670
+Congressman	Ohio	15	25671
+Congressman	Ohio	16	25672
+Congressman	Ohio	17	25673
+Congressman	Ohio	18	25674
+Senator	Oklahoma	null	20477,20527,28901,28902,28903
+Congressman	Oklahoma	1	25806
+Congressman	Oklahoma	2	25807
+Congressman	Oklahoma	3	20746
+Congressman	Oklahoma	4	25808
+Congressman	Oklahoma	5	25809
+Senator	Oregon	null	20478,20528,28904,28905,28906
+Congressman	Oregon	1	25958
+Congressman	Oregon	2	25959
+Congressman	Oregon	3	25960
+Congressman	Oregon	4	25961
+Congressman	Oregon	5	25962
+Senator	Pennsylvania	null	20479,20529,28907,28908,28909
+Congressman	Pennsylvania	1	26052
+Congressman	Pennsylvania	2	26053
+Congressman	Pennsylvania	3	26054
+Congressman	Pennsylvania	4	26055
+Congressman	Pennsylvania	5	26056
+Congressman	Pennsylvania	6	26057
+Congressman	Pennsylvania	7	26058
+Congressman	Pennsylvania	8	26059
+Congressman	Pennsylvania	9	26060
+Congressman	Pennsylvania	10	26061
+Congressman	Pennsylvania	11	26062
+Congressman	Pennsylvania	12	26063
+Congressman	Pennsylvania	13	26064
+Congressman	Pennsylvania	14	26065
+Congressman	Pennsylvania	15	26066
+Congressman	Pennsylvania	16	20749
+Congressman	Pennsylvania	17	26067
+Congressman	Pennsylvania	18	26068
+Congressman	Pennsylvania	19	26069
+Senator	Rhode Island	null	20480,20530,28910,28911,28912
+Congressman	Rhode Island	1	26321
+Congressman	Rhode Island	2	26322
+Senator	South Carolina	null	20481,20531,28913,28914,28915
+Congressman	South Carolina	1	26434
+Congressman	South Carolina	2	26435
+Congressman	South Carolina	3	26436
+Congressman	South Carolina	4	26437
+Congressman	South Carolina	5	26438
+Congressman	South Carolina	6	26439
+Congressman	South Carolina	7	29546
+Senator	South Dakota	null	20482,20532,28916,28917,28918
+Congressman	South Dakota	null	26608
+Senator	Tennessee	null	20483,20533,28919,28920,28921
+Congressman	Tennessee	1	26679
+Congressman	Tennessee	2	26680
+Congressman	Tennessee	3	26681
+Congressman	Tennessee	4	26682
+Congressman	Tennessee	5	26683
+Congressman	Tennessee	6	26684
+Congressman	Tennessee	7	26685
+Congressman	Tennessee	8	26686
+Congressman	Tennessee	9	26687
+Senator	Texas	null	20484,20534,28922,28923,28924
+Congressman	Texas	1	26819
+Congressman	Texas	2	26820
+Congressman	Texas	3	26821
+Congressman	Texas	4	26822
+Congressman	Texas	5	26823
+Congressman	Texas	6	26824
+Congressman	Texas	7	26825
+Congressman	Texas	8	26826
+Congressman	Texas	9	26827
+Congressman	Texas	10	26828
+Congressman	Texas	11	26829
+Congressman	Texas	12	26830
+Congressman	Texas	13	26831
+Congressman	Texas	14	26832
+Congressman	Texas	15	26833
+Congressman	Texas	16	26834
+Congressman	Texas	17	26835
+Congressman	Texas	18	26836
+Congressman	Texas	19	26837
+Congressman	Texas	20	26838
+Congressman	Texas	21	26839
+Congressman	Texas	22	26840
+Congressman	Texas	23	26841
+Congressman	Texas	24	26842
+Congressman	Texas	25	26843
+Congressman	Texas	26	26844
+Congressman	Texas	27	20758
+Congressman	Texas	28	26845
+Congressman	Texas	29	26846
+Congressman	Texas	30	26847
+Congressman	Texas	31	26848
+Congressman	Texas	32	26849
+Congressman	Texas	33	29536
+Congressman	Texas	34	29537
+Congressman	Texas	35	29538
+Congressman	Texas	36	29539
+Senator	Utah	null	20485,20535,28925,28926,28927
+Congressman	Utah	1	27029
+Congressman	Utah	2	27030
+Congressman	Utah	3	27031
+Congressman	Utah	4	29545
+Senator	Vermont	null	20486,20536,28928,28929,28930
+Congressman	Vermont	null	27133
+Senator	Virginia	null	20487,20537,28931,28932,28933
+Congressman	Virginia	1	27254
+Congressman	Virginia	2	27255
+Congressman	Virginia	3	27256
+Congressman	Virginia	4	27257
+Congressman	Virginia	5	27258
+Congressman	Virginia	6	27259
+Congressman	Virginia	7	27260
+Congressman	Virginia	8	27261
+Congressman	Virginia	9	27262
+Congressman	Virginia	10	27263
+Congressman	Virginia	11	27264
+Senator	Washington	null	20488,20538,28934,28935,28936
+Congressman	Washington	1	27403
+Congressman	Washington	2	27404
+Congressman	Washington	3	27405
+Congressman	Washington	4	27406
+Congressman	Washington	5	27407
+Congressman	Washington	6	27408
+Congressman	Washington	7	27409
+Congressman	Washington	8	27410
+Congressman	Washington	9	27411
+Congressman	Washington	10	29547
+Senator	West Virginia	null	20489,20539,28937,28938,28939
+Congressman	West Virginia	1	27509
+Congressman	West Virginia	2	27510
+Congressman	West Virginia	3	27511
+Senator	Wisconsin	null	20490,20540,28940,28941,28942
+Congressman	Wisconsin	1	27585
+Congressman	Wisconsin	2	27586
+Congressman	Wisconsin	3	27587
+Congressman	Wisconsin	4	27588
+Congressman	Wisconsin	5	27589
+Congressman	Wisconsin	6	27590
+Congressman	Wisconsin	7	27591
+Congressman	Wisconsin	8	27592
+Senator	Wyoming	null	20491,20541,28943,28944,28945
+Congressman	Wyoming	null	27723

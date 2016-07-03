@@ -1,0 +1,7 @@
+/cache
+/data
+/target/classes
+/target/test-classes/examples/*.class
+/target/test-classes/badpage
+/src/main/resources/votesmart.properties
+/src/test/resources/badpage
