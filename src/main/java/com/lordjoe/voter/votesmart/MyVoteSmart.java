@@ -20,7 +20,7 @@ import java.util.*;
  */
 public class MyVoteSmart {
     public static final String CURRENT_YEAR = "2016";
-    public static final String FIRST_INTERESTING_YEAR = "2000";
+    public static final String FIRST_INTERESTING_YEAR = "2009";
     public static final String DISTRICTS_FILE = "VoteSmartDistricts.txt";
     private static final String CANDIDATES_FILE = "Candidates.txt";
     private static Map<State, String> gStateToCongressionalElectionId;
@@ -49,8 +49,10 @@ public class MyVoteSmart {
             initElections();
             initOfficials();
             VoteSmartVotes.initIfNeeded();
-            VoteSmartRating.initIfNeeded();
-            VoteSmartQuestionaire.initIfNeeded();
+             // commented out to speed up
+         //   VoteSmartRating.initIfNeeded();
+         //   VoteSmartQuestionaire.initIfNeeded();
+           // VoteSmartBio.initIfNeeded();
             writeCandidates(CANDIDATES_FILE);
 
         }
@@ -404,7 +406,7 @@ public class MyVoteSmart {
 
     }
 
-    private static void breakHere() {
+    public static void breakHere() {
     }
 
     private static void writeCandidates(String fileName) {

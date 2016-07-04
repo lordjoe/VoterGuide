@@ -6,6 +6,6 @@ package com.lordjoe.voter;
  * Date: 7/1/2016
  */
 public enum VotePosition {
-    Yea,Nea,Abstain;
+    Yea,Nay,Abstain;
 
 }

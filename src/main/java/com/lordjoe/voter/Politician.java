@@ -12,7 +12,7 @@ public class Politician extends Person {
 
     private Integer voteSmartId;
     private String imageURL;
-       private final Map<Issue, Position> Positions = new HashMap<Issue, Position>();
+    private final Map<Issue, Position> Positions = new HashMap<Issue, Position>();
     private final PersonalInformation info = new PersonalInformation();
 
     protected Politician(String firstName, String lastName, Integer voteSmartId) {
@@ -21,8 +21,9 @@ public class Politician extends Person {
     }
 
     public String getVoteSmartIdStr() {
-        return Integer.toString(getVoteSmartId()) ;
+        return Integer.toString(getVoteSmartId());
     }
+
     public Integer getVoteSmartId() {
         return voteSmartId;
     }
@@ -42,7 +43,7 @@ public class Politician extends Person {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-         if (o == null || getClass() != o.getClass()) return false;
+        if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
 
         Politician that = (Politician) o;
