@@ -1,7 +1,7 @@
 package com.lordjoe.voter;
 
+import com.google.appengine.api.datastore.Key;
 import com.lordjoe.utilities.CollectionUtilities;
-import com.lordjoe.voter.votesmart.VoteSmartUtilities;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -17,6 +17,7 @@ import java.util.*;
 public class Politicians {
     public static final Map<Person,Politician> byPerson = new HashMap<Person, Politician>();
     public static final Map<Integer,Politician> byVoteSmartId = new HashMap<Integer, Politician>();
+    public static final Map<Key,Politician> byKey = new HashMap<Key, Politician>();
 
     public static Politician get(Integer id,String firstName,String lastName)  {
         Politician ret = byVoteSmartId.get(id);
@@ -38,7 +39,7 @@ public class Politicians {
     {
         Collection<Person> persons = byPerson.keySet();
         List<Person> ts = CollectionUtilities.sortedCollection(persons);
-        List<Politician> pols = new ArrayList<>();
+        List<Politician> pols = new ArrayList<Politician>();
         for (Person p  : ts) {
            pols.add(byPerson.get(p));
         }
@@ -47,7 +48,11 @@ public class Politicians {
 
     private static void register(Politician ret) {
         byVoteSmartId.put(ret.getVoteSmartId(),ret);
-        byPerson.put(new Person(ret.getFirstName(),ret.getLastName()),ret);
+        Key key = ret.getKey();
+        if(key != null)
+            byKey.put(key,ret) ;
+        byVoteSmartId.put(ret.getVoteSmartId(),ret);
+        byPerson.put(new Person(ret.getFirstName(),ret.getLastName(),null),ret);
     }
 
 
@@ -58,7 +63,7 @@ public class Politicians {
 
     public static Politician getByName(String first,String last)
     {
-        Person test = new Person(first,last);
+        Person test = new Person(first,last,null);
         return byPerson.get(test);
     }
 

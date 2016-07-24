@@ -1,0 +1,14 @@
+/ConnectionLostException.java///////
+/DirectUpdater.java///////
+/DirectoryStructure.java///////
+/FtpClient.java///////
+/IFileDescriptor.java///////
+/Manifest.java///////
+/ManifestFileDescriptor.java///////
+/RemoteFileDescriptor.java///////
+/TestConnection.java///////
+/TimedDialog.java///////
+/TransferFailureException.java///////
+/UpdaterException.java///////
+/UserCanceledException.java///////
+/UserRestartException.java///////

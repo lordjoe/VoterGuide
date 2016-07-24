@@ -11,8 +11,8 @@ import java.util.*;
  */
 public class DualList<K,T> implements  Serializable {
 
-    private final Map<K,Set<T>> forward = new HashMap<>() ;
-    private final Map<T,K> reverse = new HashMap<>() ;
+    private final Map<K,Set<T>> forward = new HashMap<K, Set<T>>() ;
+    private final Map<T,K> reverse = new HashMap<T, K>() ;
     private final Class kClass;
     private final Class tClass;
 
@@ -28,7 +28,7 @@ public class DualList<K,T> implements  Serializable {
             throw new IllegalArgumentException("bad type " + t.getClass());
         Set<T> existing = forward.get(k);
         if(existing == null)   {
-             existing = new HashSet<>();
+             existing = new HashSet<T>();
             forward.put(k,existing);
         }
         existing.add(t);
@@ -61,7 +61,7 @@ public class DualList<K,T> implements  Serializable {
             throw new IllegalArgumentException("bad type " + k.getClass());
         Set<T> ts = forward.get(k);
         if(ts == null)   {
-            ts = new HashSet<>();
+            ts = new HashSet<T>();
             forward.put(k,ts);
         }
         return ts;

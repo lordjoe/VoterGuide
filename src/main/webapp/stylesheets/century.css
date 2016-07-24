@@ -1,0 +1,16 @@
+BODY
+{
+    BACKGROUND-REPEAT: no-repeat
+}
+.century
+{
+    COLOR: #000000;
+    FONT-FAMILY: Century Gothic;
+    FONT-SIZE: 11px;
+    HEIGHT: 20px;
+    LINE-HEIGHT: 20px;
+    PADDING-BOTTOM: 20px;
+    TEXT-DECORATION: none
+}
+
+    

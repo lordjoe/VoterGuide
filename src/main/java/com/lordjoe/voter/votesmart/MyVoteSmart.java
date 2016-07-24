@@ -25,20 +25,20 @@ public class MyVoteSmart {
     private static final String CANDIDATES_FILE = "Candidates.txt";
     private static Map<State, String> gStateToCongressionalElectionId;
     private static Map<State, String> gStateToStateElectionId;
-    private static Map<String, OfficeLevel> gStringToOfficeLevel = new HashMap<>();
+    private static Map<String, OfficeLevel> gStringToOfficeLevel = new HashMap<String, OfficeLevel>();
 
-    private static DualMap<State, String> gStateToString = new DualMap<>(State.class, String.class);
-    private static DualMap<OfficeType, String> gOfficeTypeToString = new DualMap<>(OfficeType.class, String.class);
-    private static DualMap<Candidate, String> gCandidateToStringID = new DualMap<>(Candidate.class, String.class);
+    private static DualMap<State, String> gStateToString = new DualMap<State, String>(State.class, String.class);
+    private static DualMap<OfficeType, String> gOfficeTypeToString = new DualMap<OfficeType, String>(OfficeType.class, String.class);
+    private static DualMap<Candidate, String> gCandidateToStringID = new DualMap<Candidate, String>(Candidate.class, String.class);
 
-    private static DualList<District, String> gDistrictToStringID = new DualList<>(District.class, String.class);
+    private static DualList<District, String> gDistrictToStringID = new DualList<District, String>(District.class, String.class);
 
 
     public static List<District> getDistricts() {
         initIfNeeded();
         Set<District> districts = gDistrictToStringID.reverseValues();
-        List<District> ret =  CollectionUtilities.sortedCollection(districts);
-          return ret;
+        List<District> ret = CollectionUtilities.sortedCollection(districts);
+        return ret;
     }
 
     public static void initIfNeeded() {
@@ -49,10 +49,10 @@ public class MyVoteSmart {
             initElections();
             initOfficials();
             VoteSmartVotes.initIfNeeded();
-             // commented out to speed up
-         //   VoteSmartRating.initIfNeeded();
-         //   VoteSmartQuestionaire.initIfNeeded();
-           // VoteSmartBio.initIfNeeded();
+            // commented out to speed up
+            VoteSmartRating.initIfNeeded();
+            //   VoteSmartQuestionaire.initIfNeeded();
+            // VoteSmartBio.initIfNeeded();
             writeCandidates(CANDIDATES_FILE);
 
         }
@@ -73,7 +73,7 @@ public class MyVoteSmart {
         try {
             PrintWriter out = new PrintWriter(new FileWriter(fileName));
             Set<District> districts = gDistrictToStringID.reverseValues();
-            List<District> sorted = new ArrayList<>(districts);
+            List<District> sorted = new ArrayList<District>(districts);
             Collections.sort(sorted);
             for (District district : sorted) {
                 out.print(district.type);
@@ -83,7 +83,7 @@ public class MyVoteSmart {
                 out.print(district.number);
                 out.print("\t");
                 Set<String> strings = gDistrictToStringID.forwardLookup(district);
-                List<String> sortedId = new ArrayList<>(strings);
+                List<String> sortedId = new ArrayList<String>(strings);
                 Collections.sort(sortedId);
                 if (sorted.size() == 1) {
                     out.print(sortedId.get(0));
@@ -115,7 +115,7 @@ public class MyVoteSmart {
                 String[] items = line.split("\t");
                 int index = 0;
                 OfficeType type = OfficeType.valueOf(items[index++]);
-                State state = State.valueOfName(items[index++]);
+                State state = State.fromString(items[index++]);
                 String name = items[index++];
                 District ds = Districts.getDistrict(type, state, name);
 
@@ -149,7 +149,7 @@ public class MyVoteSmart {
         for (OfficeType officeType : gOfficeTypeToString.reverseValues()) {
             String officeStr = gOfficeTypeToString.forwardLookup(officeType);
             for (State state : State.values()) {
-                if(state == State.ARIZONA)
+                if (state == State.ARIZONA)
                     breakHere();
                 String statStr = gStateToString.forwardLookup(state);
                 CandidateList byOfficeState = null;
@@ -158,13 +158,13 @@ public class MyVoteSmart {
                 } catch (VoteSmartException e) {
                     continue;
                 } catch (VoteSmartErrorException e) {
-                    switch(officeType ) {
+                    switch (officeType) {
                         case Senator:
-                            if(state.isSenators())
+                            if (state.isSenators())
                                 throw new IllegalStateException("problem"); // ToDo change
                             break;
                         case Governor:
-                            if(state.isSenators())
+                            if (state.isSenators())
                                 throw new IllegalStateException("problem"); // ToDo change
                             break;
                         default:
@@ -178,26 +178,25 @@ public class MyVoteSmart {
                     String officeDistrictName = candidate.officeDistrictName;
                     String officeDistrictId = candidate.officeDistrictId;
                     Integer districtNumber = null;
-                    if(!"".equals(officeDistrictId))  {
+                    if (!"".equals(officeDistrictId)) {
                         try {
                             districtNumber = Integer.parseInt(officeDistrictName);
                         } catch (NumberFormatException e) {
                             districtNumber = null;
-                     }
+                        }
                     }
                     OfficeType type = typeFromName(officeName);
                     String firstName = candidate.firstName;
                     String lastName = candidate.lastName;
-                    District district1 = Districts.getDistrict(type,state,districtNumber);
-                    if(district1 == null)
+                    District district1 = Districts.getDistrict(type, state, districtNumber);
+                    if (district1 == null)
                         continue;
-                    Politician incumbent = Politicians.getByName(firstName,lastName);
+                    Politician incumbent = Politicians.getByName(firstName, lastName);
                     if (incumbent != null) {
                         district1.setIncumbent(incumbent);
-                    }
-                    else {
+                    } else {
                         Integer id = Integer.parseInt(candidateId);
-                        district1.setIncumbent(Politicians.get(id,firstName,lastName));
+                        district1.setIncumbent(Politicians.get(id, firstName, lastName));
                     }
 
                 }
@@ -211,12 +210,12 @@ public class MyVoteSmart {
             OfficeType ret = OfficeType.valueOf(officeName);
             return ret;
         } catch (IllegalArgumentException e) {
-         }
-          if("U.S. Senate".equalsIgnoreCase(officeName))
+        }
+        if ("U.S. Senate".equalsIgnoreCase(officeName))
             return OfficeType.Senator;
-          if("U.S. House".equalsIgnoreCase(officeName))
+        if ("U.S. House".equalsIgnoreCase(officeName))
             return OfficeType.Congressman;
-        if("Congressman".equalsIgnoreCase(officeName))
+        if ("Congressman".equalsIgnoreCase(officeName))
             return OfficeType.Congressman;
         return null;
     }
@@ -256,7 +255,7 @@ public class MyVoteSmart {
         gOfficeTypeToString.register(OfficeType.Congressman, "5");
         gOfficeTypeToString.register(OfficeType.Senator, "6");
         gOfficeTypeToString.register(OfficeType.Governor, "3");
-   //    gOfficeTypeToString.register(OfficeType.LeutenantGovernor, "4");
+        //    gOfficeTypeToString.register(OfficeType.LeutenantGovernor, "4");
 
 
         try {
@@ -293,7 +292,7 @@ public class MyVoteSmart {
             StateList allStates = stateClass.getStateIDs();
             StateList.List.State state = null;
             for (StateList.List.State aState : allStates.list.state) {
-                State st = State.valueOfName(aState.name);
+                State st = State.fromString(aState.name);
                 if (st != null) {
                     String id = aState.stateId;
                     gStateToString.register(st, id);
@@ -312,8 +311,8 @@ public class MyVoteSmart {
 
     private static synchronized void initElections() {
         try {
-            gStateToCongressionalElectionId = new HashMap<>();
-            gStateToStateElectionId = new HashMap<>();
+            gStateToCongressionalElectionId = new HashMap<State, String>();
+            gStateToStateElectionId = new HashMap<State, String>();
             // Determine California State Id
             ElectionClass ec = new ElectionClass();
             for (State state : gStateToString.reverseValues()) {
@@ -378,8 +377,8 @@ public class MyVoteSmart {
                         Politician myCandidate = Politicians.get(Integer.parseInt(candidateId), firstName, lastName);
                         Party party = Party.fromName(partyName);
 
-                        Race race = Races.getRace(district, Integer.parseInt(CURRENT_YEAR),stage);
-                        Candidate candidate =  Candidates.getCandidate(myCandidate, party, race);
+                        Race race = Races.getRace(district, Integer.parseInt(CURRENT_YEAR), stage);
+                        Candidate candidate = Candidates.getCandidate(myCandidate, party, race);
                         gCandidateToStringID.register(candidate, candidateId);
                     }
 
@@ -400,7 +399,7 @@ public class MyVoteSmart {
 
                 }
             }
-          } catch (VoteSmartException e) {
+        } catch (VoteSmartException e) {
             throw new RuntimeException(e);
         }
 
@@ -434,7 +433,7 @@ public class MyVoteSmart {
         out.print("\t");
         out.print(race.getStage());
 
-        if(candidate.isIncumbent())  {
+        if (candidate.isIncumbent()) {
             out.print("\tIncumbent");
         }
 
@@ -480,8 +479,8 @@ public class MyVoteSmart {
             return;
         }
         try {
-            gStateToCongressionalElectionId = new HashMap<>();
-            gStateToStateElectionId = new HashMap<>();
+            gStateToCongressionalElectionId = new HashMap<State, String>();
+            gStateToStateElectionId = new HashMap<State, String>();
             // Determine California State Id
             DistrictClass districts = new DistrictClass();
             for (State state : gStateToString.reverseValues()) {

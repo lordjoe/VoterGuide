@@ -1,5 +1,9 @@
 package com.lordjoe.voter;
 
+import com.google.appengine.api.datastore.Entity;
+import com.lordjoe.voter.votesmart.GoogleDatabase;
+import com.sun.javafx.beans.annotations.NonNull;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -16,7 +20,7 @@ public class Politician extends Person {
     private final PersonalInformation info = new PersonalInformation();
 
     protected Politician(String firstName, String lastName, Integer voteSmartId) {
-        super(firstName, lastName);
+         super(firstName, lastName, GoogleDatabase.createKey(voteSmartId.toString(),Politician.class));
         this.voteSmartId = voteSmartId;
     }
 
@@ -49,6 +53,17 @@ public class Politician extends Person {
         Politician that = (Politician) o;
 
         return voteSmartId != null ? voteSmartId.equals(that.voteSmartId) : that.voteSmartId == null;
+
+    }
+
+
+    @Override
+    public Entity asEntity() {
+        throw new UnsupportedOperationException("Fix This"); // ToDo
+    }
+
+    @Override
+    public void populateFromEntity(@NonNull Entity e) {
 
     }
 

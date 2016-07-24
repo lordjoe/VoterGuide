@@ -1,5 +1,9 @@
 package com.lordjoe.voter;
 
+import com.google.appengine.api.datastore.Entity;
+import com.lordjoe.voter.votesmart.GoogleDatabase;
+import com.sun.javafx.beans.annotations.NonNull;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -8,24 +12,39 @@ import java.util.Set;
  * User: Steve
  * Date: 6/23/2016
  */
-public class District implements Comparable<District> {
+public class District  extends PersistentVoterItem  implements Comparable<District> {
     public final OfficeType type;
     public final State state; // null for federal
     public final Integer number; // null if none
-    protected Set<Politician> incumbent = new HashSet<>();
+    protected Set<Politician> incumbent = new HashSet<Politician>();
 
-    /**
-     * use Districts.getDistrict
-     * @param type
-     * @param state
-     * @param number
-     */
+    protected static String districtIdStr(OfficeType type, State state, Integer number) {
+        throw new UnsupportedOperationException("Fix This"); // ToDo
+    }
+
+        /**
+         * use Districts.getDistrict
+         * @param type
+         * @param state
+         * @param number
+         */
     protected District(OfficeType type, State state, Integer number) {
+        super(GoogleDatabase.createKey(districtIdStr(  type,   state,   number),District.class));
         this.type = type;
         this.state = state;
         this.number = number;
     }
 
+
+    @Override
+    public Entity asEntity() {
+        throw new UnsupportedOperationException("Fix This"); // ToDo
+    }
+
+    @Override
+    public void populateFromEntity(@NonNull Entity e) {
+
+    }
 
     public void setIncumbent(Politician incumbent) {
         this.incumbent.add(incumbent);

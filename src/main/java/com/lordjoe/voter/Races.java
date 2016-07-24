@@ -28,6 +28,16 @@ public class Races {
         return race;
     }
 
+    public static List<Race> getRace(State s) {
+        List<Race> ret = new ArrayList<Race>();
+        for (Race race : byDistrict.values()) {
+           if(race.district.state == s)
+               ret.add(race);
+        }
+        Collections.sort(ret);
+        return ret;
+    }
+
     public static Race getRace(District d,Integer year) {
          return getRace(d,year,ElectionStage.General);
     }

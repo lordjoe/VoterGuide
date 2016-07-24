@@ -13,8 +13,8 @@ import java.util.Set;
  */
 public class DualMap<K,T> implements  Serializable {
 
-    private final Map<K,T> forward = new HashMap<>() ;
-    private final Map<T,K> reverse = new HashMap<>() ;
+    private final Map<K,T> forward = new HashMap<K, T>();
+    private final Map<T,K> reverse = new HashMap<T, K>() ;
     private final Class kClass;
     private final Class tClass;
 

@@ -1,5 +1,9 @@
 package com.lordjoe.voter;
 
+import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.Key;
+import com.sun.javafx.beans.annotations.NonNull;
+
 /**
  * com.lordjoe.voter.votesmart.VoteEvidence
  * User: Steve
@@ -8,14 +12,23 @@ package com.lordjoe.voter;
 public class InterestGroupRatingEvidence extends Evidence {
 
 
-    private final InterestGroup group;
-    private final String rating;
+    public final InterestGroup group;
+    public final String rating;
 
-    public InterestGroupRatingEvidence(InterestGroup group, String rating) {
+    public InterestGroupRatingEvidence(InterestGroup group, String rating,Key key) {
+        super(key);
         this.group = group;
         this.rating = rating;
     }
 
 
+    @Override
+    public Entity asEntity() {
+        return null;
+    }
 
+    @Override
+    public void populateFromEntity(@NonNull Entity e) {
+
+    }
 }

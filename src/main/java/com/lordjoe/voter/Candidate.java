@@ -1,5 +1,9 @@
 package com.lordjoe.voter;
 
+import com.google.appengine.api.datastore.Entity;
+import com.lordjoe.voter.votesmart.GoogleDatabase;
+import com.sun.javafx.beans.annotations.NonNull;
+
 import java.util.Comparator;
 
 /**
@@ -7,7 +11,7 @@ import java.util.Comparator;
  * User: Steve
  * Date: 6/23/2016
  */
-public class Candidate {
+public class Candidate extends PersistentVoterItem {
     public static final Comparator<? super Candidate> BY_DISTRICT = new Comparator<Candidate>() {
         @Override
         public int compare(Candidate o1, Candidate o2) {
@@ -30,6 +34,7 @@ public class Candidate {
     public  final Race race;
 
     public Candidate(Politician pol, Party party, Race race) {
+        super(GoogleDatabase.createKey(pol.getVoteSmartIdStr(),Candidate.class));
         this.pol = pol;
         this.party = party;
         this.race = race;
@@ -40,6 +45,15 @@ public class Candidate {
         return race.isIncumbent(this) ;
     }
 
+    @Override
+    public Entity asEntity() {
+        throw new UnsupportedOperationException("Fix This"); // ToDo
+    }
+
+    @Override
+    public void populateFromEntity(@NonNull Entity e) {
+
+    }
 
     public String displayText() {
         StringBuilder sb = new StringBuilder();

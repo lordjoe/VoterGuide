@@ -1,0 +1,24 @@
+
+.textblack
+{
+    COLOR: #000000;
+    FONT-FAMILY: Tahoma, Arial, Helvetica, Sans Serif;
+    FONT-SIZE: 11px;
+   
+}
+
+.textred
+{
+    COLOR: red;
+    FONT-FAMILY: Tahoma, Arial, Helvetica, Sans Serif;
+    FONT-SIZE: 11px;
+   
+}
+
+.header {  
+font-family: Tahoma, Arial, Helvetica, sans-serif; 
+font-size: 17px; 
+font-weight: bold; 
+color: #000000
+}	
+    

@@ -1,21 +1,14 @@
 package com.lordjoe.voter.votesmart;
 
-import com.lordjoe.utilities.DualList;
-import com.lordjoe.utilities.DualMap;
 import com.lordjoe.voter.*;
 import org.votesmart.api.VoteSmartErrorException;
 import org.votesmart.api.VoteSmartException;
 import org.votesmart.classes.CandidateBioClass;
 import org.votesmart.data.AddlBio;
 import org.votesmart.data.Bio;
-import org.votesmart.data.GeneralInfoBase;
-import org.votesmart.data.Sigs;
 
 import java.text.DateFormat;
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.Date;
 import java.util.List;
 
@@ -72,7 +65,7 @@ public class VoteSmartBio {
     }
 
 
-    public static final DateTimeFormatter DATE_FORMATTER = DateTimeFormatter.ofPattern("MM/dd/yyyy");
+    public static final DateFormat DATE_FORMATTER = new SimpleDateFormat("MM/dd/yyyy");
 
     private static void updateFromBios(Politician politician, Bio bio, AddlBio addlBio) {
         PersonalInformation info = politician.getInfo();
@@ -80,7 +73,7 @@ public class VoteSmartBio {
         String birthDate = candidate.birthDate;
         if (!VoteSmartUtilities.isEmptyOrNull(birthDate)) {
             try {
-                LocalDate birthday = LocalDate.parse(birthDate, DATE_FORMATTER);
+                Date birthday = DATE_FORMATTER.parse(birthDate);
                 info.setBirthday(birthday);
             } catch (Exception e) {
                 //System.out.println("Cannot parse " + birthDate);
@@ -111,9 +104,9 @@ public class VoteSmartBio {
         for (int i = 0; i < items.length; i++) {
             String item = items[i];
             if (item.startsWith("Wife:"))
-                info.setSponse(new Person(item.replace("Wife:", ""), null));
+                info.setSponse(new Person(item.replace("Wife:", ""), null,null));
             if (item.startsWith("Husband:"))
-                info.setSponse(new Person(item.replace("Husband:", ""), null));
+                info.setSponse(new Person(item.replace("Husband:", ""), null,null));
             if (item.contains("Child")) {
                 handleChildren(info, item);
             }
@@ -126,11 +119,11 @@ public class VoteSmartBio {
         String[] child1 = split[0].split(" ");
         if(child1.length != 3)
             return;
-        Person child =  new Person(child1[2], null);
+        Person child =  new Person(child1[2], null,null);
         info.addChild(child);
         for (int i = 1; i < split.length; i++) {
             String s = split[i].replace(",","");
-              child = new Person(s, null);
+              child = new Person(s, null,null);
             info.addChild(child);
         }
 

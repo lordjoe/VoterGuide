@@ -1,5 +1,9 @@
 package com.lordjoe.voter;
 
+import com.google.appengine.api.datastore.Entity;
+import com.lordjoe.voter.votesmart.GoogleDatabase;
+import com.sun.javafx.beans.annotations.NonNull;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,17 +12,32 @@ import java.util.List;
  * User: Steve
  * Date: 6/23/2016
  */
-public class Race implements Comparable<Race> {
+public class Race  extends PersistentVoterItem implements Comparable<Race> {
+
+    public static String buildIdString(District district, Integer year, ElectionStage stage) {
+        throw new UnsupportedOperationException("Fix This"); // ToDo
+    }
 
     public final District district;
     public final Integer year;
     public final ElectionStage stage;
     private final List<Candidate> candidates = new ArrayList<Candidate>();
 
-    public Race(District district, Integer year, ElectionStage stage) {
+    protected Race(District district, Integer year, ElectionStage stage) {
+        super(GoogleDatabase.createKey(buildIdString(district,   year,   stage),Race.class));
         this.district = district;
         this.year = year;
         this.stage = stage;
+    }
+
+    @Override
+    public Entity asEntity() {
+        throw new UnsupportedOperationException("Fix This"); // ToDo
+    }
+
+    @Override
+    public void populateFromEntity(@NonNull Entity e) {
+
     }
 
     /**
@@ -39,6 +58,10 @@ public class Race implements Comparable<Race> {
         candidates.add(c);
     }
 
+    public List<Candidate> getCandidates()
+    {
+        return new ArrayList<Candidate>(candidates) ;
+    }
     /**
      * return a candidate corresponding to the politician
      * @param pol as above

@@ -1,21 +1,36 @@
 package com.lordjoe.voter;
 
+import com.google.appengine.api.datastore.Entity;
+import com.lordjoe.voter.votesmart.GoogleDatabase;
+import com.sun.javafx.beans.annotations.NonNull;
+
 /**
  * com.lordjoe.voter.votesmart.Bill
  * User: Steve
  * Date: 7/1/2016
  */
-public class Bill {
+public class Bill extends PersistentVoterItem {
     public final LegislativeBranch branch;
     public final String name;
     public final String votesmartName;
     public final Integer year;
 
     public Bill(LegislativeBranch branch, String name, String votesmartName, Integer year) {
+        super(GoogleDatabase.createKey(votesmartName,Bill.class));
         this.branch = branch;
         this.name = name;
         this.votesmartName = votesmartName;
         this.year = year;
+    }
+
+    @Override
+    public Entity asEntity() {
+        throw new UnsupportedOperationException("Fix This"); // ToDo
+    }
+
+    @Override
+    public void populateFromEntity(@NonNull Entity e) {
+
     }
 
     @Override

@@ -1,7 +1,6 @@
 package com.lordjoe.voter;
 
-import java.time.LocalDate;
-import java.time.Period;
+
 import java.util.*;
 
 /**
@@ -14,7 +13,7 @@ public class PersonalInformation {
     private Person sponse;
     private final Set<Person> children = new HashSet<Person>();
     private String religion;
-    private LocalDate birthday;
+    private  Date birthday;
 
     public void setFrom(PersonalInformation p) {
         setGender(p.getGender());
@@ -58,21 +57,21 @@ public class PersonalInformation {
         this.religion = religion;
     }
 
-    public LocalDate getBirthday() {
+    public Date getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(LocalDate birthday) {
+    public void setBirthday(Date birthday) {
         this.birthday = birthday;
     }
 
     public void setBirthday(int year,int month,int day) {
-        setBirthday( LocalDate.of( year,month,day));
+        setBirthday( new Date( year,month,day));
     }
 
     public int getAge() {
-        LocalDate today = LocalDate.now();
-        Period age = Period.between(birthday,today);
-        return age.getYears();
+        Date today = new Date();
+        long ageMillisec = today.getTime() - getBirthday().getTime();
+        return (int)(ageMillisec / (365.25 * 24 * 60 * 60 * 1000));
     }
 }

@@ -1,6 +1,5 @@
 package com.lordjoe.voter.reader;
 
-import com.lordjoe.voter.Politicians;
 import com.lordjoe.voter.Races;
 import com.lordjoe.voter.votesmart.MyVoteSmart;
 
@@ -26,9 +25,7 @@ public class VoteSmartReader {
 
     public static void readVoteSmart() {
         File base = getBaseFile();
-        File candidates = getCandidatesDirectory(base);
-     //    CandidateReader.readCandidates(candidates);
-       CandidateReader.readCandidatesFile(base);
+        CandidateReader.readCandidatesFile(base);
 
         File elections = getElectionsDirectory(base);
         ElectionReader.readElections(elections,Integer.parseInt(MyVoteSmart.CURRENT_YEAR));

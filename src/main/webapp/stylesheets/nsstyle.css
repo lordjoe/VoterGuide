@@ -1,0 +1,41 @@
+BODY
+{
+    BACKGROUND-REPEAT: no-repeat
+}
+.hometext
+{
+    COLOR: #ffffff;
+    FONT-FAMILY: Tahoma, Arial, Helvetica, Sans Serif;
+    FONT-SIZE: 11px;
+    HEIGHT: 20px;
+    LINE-HEIGHT: 20px;
+    PADDING-BOTTOM: 20px;
+    TEXT-DECORATION: none
+}
+
+.lrgtextwhite
+{
+    COLOR: #ffffff;
+    FONT-FAMILY: Tahoma, Arial, Helvetica, Sans Serif;
+    FONT-SIZE: 12px;
+    TEXT-DECORATION: none
+}
+
+.lrgtextblack
+{
+    COLOR: #000000;
+    FONT-FAMILY: Tahoma, Arial, Helvetica, Sans Serif;
+    FONT-SIZE: 12px;
+    TEXT-DECORATION: none
+}
+
+.header
+{
+    COLOR: #ffffff;
+    FONT-FAMILY: Tahoma, Arial, Helvetica, Sans Serif;
+    FONT-SIZE: 15px;
+    HEIGHT: 20px;
+    LINE-HEIGHT: 20px;
+    PADDING-BOTTOM: 20px;
+    TEXT-DECORATION: none
+}    

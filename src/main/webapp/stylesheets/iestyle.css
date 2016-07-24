@@ -1,0 +1,15 @@
+BODY
+{
+    BACKGROUND-REPEAT: repeat-y;
+}
+.hometext
+{
+    COLOR: #ffffff;
+    FONT-FAMILY: Tahoma, Arial, Helvetica, Sans Serif;
+    FONT-SIZE: 11px;
+    HEIGHT: 20px;
+    LINE-HEIGHT: 20px;
+    PADDING-BOTTOM: 20px;
+
+    TEXT-DECORATION: none
+}

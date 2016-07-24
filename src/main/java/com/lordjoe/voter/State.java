@@ -14,7 +14,7 @@ public enum State {
     COLORADO("Colorado", "CO"),
     CONNECTICUT("Connecticut", "CT"),
     DELAWARE("Delaware", "DE"),
-    DISTRICT_OF_COLUMBIA("District of Columbia", "DC",false), // no senators
+    DISTRICT_OF_COLUMBIA("District of Columbia", "DC", false), // no senators
     // FEDERATED_STATES_OF_MICRONESIA("Federated States of Micronesia", "FM"),
     FLORIDA("Florida", "FL"),
     GEORGIA("Georgia", "GA"),
@@ -29,7 +29,7 @@ public enum State {
     LOUISIANA("Louisiana", "LA"),
     MAINE("Maine", "ME"),
     MARYLAND("Maryland", "MD"),
-  //  MARSHALL_ISLANDS("Marshall Islands", "MH"),
+    //  MARSHALL_ISLANDS("Marshall Islands", "MH"),
     MASSACHUSETTS("Massachusetts", "MA"),
     MICHIGAN("Michigan", "MI"),
     MINNESOTA("Minnesota", "MN"),
@@ -96,15 +96,16 @@ public enum State {
      * @param abbreviation the state's abbreviation.
      */
     State(String name, String abbreviation) {
-        this(name,abbreviation,true);
+        this(name, abbreviation, true);
     }
+
     /**
      * Constructs a new state.
      *
      * @param name         the state's name.
      * @param abbreviation the state's abbreviation.
      */
-    State(String name, String abbreviation,boolean hasSenator) {
+    State(String name, String abbreviation, boolean hasSenator) {
         this.name = name;
         this.abbreviation = abbreviation;
         senators = hasSenator;
@@ -131,8 +132,8 @@ public enum State {
      * @return the enum constant with the specified abbreviation.
      * @throws SunlightException if the abbreviation is invalid.
      */
-    public static State valueOfAbbreviation(final String abbr) {
-        final State state = STATES_BY_ABBR.get(abbr);
+    private static State valueOfAbbreviation(final String abbr) {
+        final State state = STATES_BY_ABBR.get(abbr.toString());
         if (state != null) {
             return state;
         } else {
@@ -140,7 +141,15 @@ public enum State {
         }
     }
 
-    public static State valueOfName(final String name) {
+
+    public static State fromString(String test) {
+        if (test.length() == 2)
+            return valueOfAbbreviation(test.toUpperCase());
+        return valueOfName(test);
+    }
+
+
+    private static State valueOfName(final String name) {
         final String enumName = name.toUpperCase().replaceAll(" ", "_");
         try {
             return valueOf(enumName);

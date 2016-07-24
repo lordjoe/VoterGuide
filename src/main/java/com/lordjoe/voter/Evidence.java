@@ -1,5 +1,8 @@
 package com.lordjoe.voter;
 
+import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.Key;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -8,11 +11,19 @@ import java.util.List;
  * User: Steve
  * Date: 7/1/2016
  */
-public class Evidence {
-     private final List<String> sources = new ArrayList<>() ;
+public abstract class Evidence extends PersistentVoterItem {
+     private final List<String> sources = new ArrayList<String>() ;
+
+    public Evidence(Key key) {
+        super(key);
+    }
+
+    public Evidence(Entity e) {
+        super(e);
+    }
 
 
-     public String getSource() {
+    public String getSource() {
          if(sources.isEmpty())
              return null;
          return sources.get(0);
@@ -24,6 +35,6 @@ public class Evidence {
     }
 
     public List<String> getSources() {
-        return new ArrayList<>(sources);
+        return new ArrayList<String>(sources);
     }
 }

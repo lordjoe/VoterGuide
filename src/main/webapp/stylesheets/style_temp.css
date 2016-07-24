@@ -1,0 +1,196 @@
+.bigheading
+{
+    COLOR: white;
+    FONT-FAMILY: 'MS Sans Serif', Helvetica;
+    FONT-SIZE: 8.5pt;
+    FONT-WEIGHT: bolder;
+    TEXT-DECORATION: none;
+    TEXT-TRANSFORM: capitalize
+}
+.bigheadingb
+{
+    COLOR: black;
+    FONT-FAMILY: 'MS Sans Serif', Helvetica;
+    FONT-SIZE: 8.5pt;
+    FONT-WEIGHT: bolder;
+    TEXT-TRANSFORM: capitalize
+}
+.bigheadingc
+{
+    COLOR: white;
+    FONT-FAMILY: 'MS Sans Serif', Helvetica;
+    FONT-SIZE: 8.5pt;
+    FONT-WEIGHT: bolder;
+    TEXT-DECORATION: none;
+    TEXT-TRANSFORM: capitalize
+}
+.smallheading
+{
+    COLOR: black;
+    FONT-FAMILY: 'MS Sans Serif, Geneva, Helvetica', 'MS Sans Serif';
+    FONT-SIZE: 7.5pt;
+    FONT-WEIGHT: normal
+}
+.middleheadingwt
+{
+    COLOR: white;
+    FONT-FAMILY: 'MS Sans Serif, Geneva, Helvetica', 'MS Sans Serif';
+    FONT-SIZE: 7.5pt;
+    FONT-WEIGHT: normal
+}
+.bigheading A:hover
+{
+    COLOR: yellow;
+    TEXT-DECORATION: none
+}
+.bigheadingc A:hover
+{
+    COLOR: #ffa000
+}
+.bigheadingc A
+{
+    COLOR: white;
+    TEXT-DECORATION: none
+}
+.bigheading A
+{
+    COLOR: white;
+    TEXT-DECORATION: none
+}
+.middleheading
+{
+    COLOR: black;
+    FONT-FAMILY: 'MS Sans Serif', Helvetica;
+    FONT-SIZE: 8pt
+}
+.middleheadingwt A
+{
+    COLOR: white;
+    text-decoration:none;
+}
+.middleheadingwt A:hover
+{
+    COLOR: yellow;
+}
+
+.middleheading A
+{
+    COLOR: blue;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 7pt
+}
+.middleheading A:hover
+{
+    COLOR: red;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 7pt
+}
+.smallheading A
+{
+    COLOR: black
+}
+.smallheading A:hover
+{
+    COLOR: red
+}
+.menu
+{
+    COLOR: white;
+    FONT-FAMILY: 'Arial';
+    FONT-SIZE: 8pt;
+    TEXT-DECORATION: none
+}
+.menu A
+{
+    COLOR: white;
+    FONT-SIZE: 8pt;
+    TEXT-DECORATION: none
+}
+.menu A:hover
+{
+    COLOR: yellow;
+    FONT-SIZE: 8pt
+}
+.smallhead
+{
+    COLOR: white;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 8pt
+}
+.smallhead A
+{
+    COLOR: white;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 8pt
+}
+.smallhead A:hover
+{
+    COLOR: yellow;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 8pt
+}
+.linkopen
+{
+    COLOR: blue;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bolder;
+    TEXT-TRANSFORM: capitalize
+}
+.linkopen A
+{
+    COLOR: blue;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bolder
+}
+.linkopen A:hover
+{
+    COLOR: red;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bolder
+}
+.toolslink A
+{
+    COLOR: mediumblue;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bolder;
+    TEXT-DECORATION: none
+}
+.toolslink A:hover
+{
+    COLOR: red;
+    FONT-FAMILY: Arial;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bolder
+}
+.toolslink
+{
+    COLOR: black
+}
+.bigheadinggraph
+{
+    COLOR: white;
+    FONT-FAMILY: 'MS Sans Serif', Helvetica;
+    FONT-SIZE: 8.5pt;
+    FONT-WEIGHT: bolder;
+    TEXT-DECORATION: none
+}
+.bigheadinggraph A
+{
+    COLOR: white;
+    FONT-FAMILY: 'Microsoft Sans Serif', Helvetica;
+    FONT-SIZE: 8.5pt;
+    FONT-WEIGHT: bolder;
+    TEXT-DECORATION: underline
+}
+.bigheadinggraph A:hover
+{
+    COLOR: yellow;
+    FONT-FAMILY: 'MS Sans Serif', Helvetica;
+    FONT-SIZE: 8.5pt;
+    FONT-WEIGHT: bolder;
+    TEXT-DECORATION: underline
+}

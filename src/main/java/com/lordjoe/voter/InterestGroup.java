@@ -1,5 +1,9 @@
 package com.lordjoe.voter;
 
+import com.google.appengine.api.datastore.Entity;
+import com.lordjoe.voter.votesmart.GoogleDatabase;
+import com.sun.javafx.beans.annotations.NonNull;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,9 +12,9 @@ import java.util.Map;
  * User: Steve
  * Date: 7/1/2016
  */
-public class InterestGroup {
-    private static Map<String,InterestGroup> byName = new HashMap<>();
-    private static Map<Integer,InterestGroup> byId = new HashMap<>();
+public class InterestGroup   extends PersistentVoterItem implements Comparable<InterestGroup> {
+    private static Map<String,InterestGroup> byName = new HashMap<String, InterestGroup>() ;
+    private static Map<Integer,InterestGroup> byId = new HashMap<Integer, InterestGroup>();
 
 
     public static InterestGroup getInterestGroup(String name)  {
@@ -39,6 +43,7 @@ public class InterestGroup {
         return Integer.toString(id);
     }
     private InterestGroup(String name, Integer id) {
+        super(GoogleDatabase.createKey(Integer.toString(id),InterestGroup.class));
         this.name = name;
         this.id = id;
     }
@@ -46,5 +51,20 @@ public class InterestGroup {
     @Override
     public String toString() {
         return name;
+    }
+
+    @Override
+    public Entity asEntity() {
+        throw new UnsupportedOperationException("Fix This"); // ToDo
+    }
+
+    @Override
+    public void populateFromEntity(@NonNull Entity e) {
+           throw new UnsupportedOperationException("Fix This"); // ToDo
+    }
+
+    @Override
+    public int compareTo(InterestGroup o) {
+        return name.compareTo(o.name);
     }
 }

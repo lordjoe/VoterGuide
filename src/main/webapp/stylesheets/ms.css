@@ -1,0 +1,73 @@
+*,td {
+  font-family : Tahoma, Arial, Helvetica, sans-serif;
+	font-size: 11px;  
+  font-style: normal; 
+ }
+
+BODY
+{
+    BACKGROUND-REPEAT: no-repeat
+}
+.standard
+{
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, Sans Serif;
+    FONT-SIZE: 11px;
+    HEIGHT: 20px;
+    LINE-HEIGHT: 20px;
+    PADDING-BOTTOM: 20px;
+    TEXT-DECORATION: none
+}
+
+.lrgtextwhite
+{
+    COLOR: #ffffff;
+    FONT-FAMILY: Tahoma, Arial, Helvetica, Sans Serif;
+    FONT-SIZE: 12px;
+    TEXT-DECORATION: none
+}
+
+.lrgtextblack
+{
+    COLOR: #000000;
+    FONT-FAMILY: Tahoma, Arial, Helvetica, Sans Serif;
+    FONT-SIZE: 12px;
+    TEXT-DECORATION: none
+}
+
+.header {  
+font-family: Arial, Helvetica, sans-serif; 
+font-size: 16px; 
+font-weight: bold; 
+color: #000000
+}	
+    
+  A, A:link, A:visited {
+ COLOR: #ffffff;
+ TEXT-DECORATION: none
+ }
+ 
+  A:hover {
+ COLOR: #FF9600; 
+ TEXT-DECORATION: none
+ }
+ 
+  .a1,.a1:link,.a1:visited {
+ COLOR: #003399;
+ TEXT-DECORATION: underline
+ }
+ 
+ .a1:hover {
+ 	COLOR: #003399;
+ 	TEXT-DECORATION: underline
+ }
+ 
+   .a2,.a2:link,.a2:visited {
+ COLOR: #ffffff;
+ TEXT-DECORATION: none
+ }
+ 
+ .a2:hover {
+ 	COLOR: #ffffff;
+ 	TEXT-DECORATION: underline
+ }

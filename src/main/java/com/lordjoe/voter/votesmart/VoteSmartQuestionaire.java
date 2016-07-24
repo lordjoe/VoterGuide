@@ -1,5 +1,6 @@
 package com.lordjoe.voter.votesmart;
 
+import com.google.appengine.api.datastore.Key;
 import com.lordjoe.voter.*;
 import org.votesmart.api.VoteSmartErrorException;
 import org.votesmart.api.VoteSmartException;
@@ -21,7 +22,7 @@ import static com.lordjoe.voter.votesmart.VoteSmartUtilities.isEmptyOrNull;
 public class VoteSmartQuestionaire {
     private static NpatClass nc;
 
-    private static Map<Politician, Map<VoteSmartIssueCategory,List<QuestionnaireEvidence>>>  questionnaireEvidence = new HashMap<>();
+    private static Map<Politician, Map<VoteSmartIssueCategory,List<QuestionnaireEvidence>>>  questionnaireEvidence = new HashMap<Politician, Map<VoteSmartIssueCategory, List<QuestionnaireEvidence>>>();
 
     public static void initIfNeeded() {
         if (nc != null)
@@ -71,7 +72,7 @@ public class VoteSmartQuestionaire {
     }
 
     private static void processNPat(Politician pol, Npat npat) {
-        Map<VoteSmartIssueCategory, List<QuestionnaireEvidence>> evidence = new HashMap<>();
+        Map<VoteSmartIssueCategory, List<QuestionnaireEvidence>> evidence = new HashMap<VoteSmartIssueCategory, List<QuestionnaireEvidence>>();
         for (Npat.Section section : npat.section) {
             processNPatSection(pol, evidence, npat, section);
 
@@ -116,10 +117,11 @@ public class VoteSmartQuestionaire {
         String question = rowText;
         List<QuestionnaireEvidence> questionnaireEvidences = evidence.get(category);
         if (questionnaireEvidences == null) {
-            questionnaireEvidences = new ArrayList<>();
+            questionnaireEvidences = new ArrayList<QuestionnaireEvidence>();
             evidence.put(category, questionnaireEvidences);
         }
-        questionnaireEvidences.add(new NPRQuestionnaireEvidence(question, answer));
+        Key key = GoogleDatabase.createKey(question,NPRQuestionnaireEvidence.class,pol) ;
+        questionnaireEvidences.add(new NPRQuestionnaireEvidence(question, answer,key));
     }
 
     public static VoteSmartIssueCategory categoryFromName(String name) {

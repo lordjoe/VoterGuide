@@ -2,8 +2,6 @@ package com.lordjoe.voter.votesmart;
 
 import java.util.*;
 
-import static javafx.scene.input.KeyCode.H;
-
 /**
  * com.lordjoe.voter.votesmart.VoteSmartBill
  * User: Steve
@@ -11,8 +9,8 @@ import static javafx.scene.input.KeyCode.H;
  */
 public class VoteSmartBill {
 
-    private static Map<Integer, VoteSmartBill> idToBill = new HashMap<>();
-    private Set<VoteSmartIssueCategory> issues = new HashSet<>();
+    private static Map<Integer, VoteSmartBill> idToBill = new HashMap<Integer, VoteSmartBill>();
+    private Set<VoteSmartIssueCategory> issues = new HashSet<VoteSmartIssueCategory>() ;
     private final Integer id;
     private final String title;
     private List<VoteSmartRollCall> rollCalls;
@@ -46,7 +44,7 @@ public class VoteSmartBill {
     }
 
     public List<VoteSmartIssueCategory> getIssues() {
-        List<VoteSmartIssueCategory> ret = new ArrayList<>(issues);
+        List<VoteSmartIssueCategory> ret = new ArrayList<VoteSmartIssueCategory>(issues);
         Collections.sort(ret);
         return ret;
     }

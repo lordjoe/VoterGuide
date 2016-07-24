@@ -15,7 +15,7 @@ public class VoteSmartRollCall {
 
     public final Integer id;
     public final VoteSmartBill bill;
-    private final Map<Politician, VotePosition> votes = new HashMap<>();
+    private final Map<Politician, VotePosition> votes = new HashMap<Politician, VotePosition>();
 
     public VoteSmartRollCall(VoteSmartBill bill,Integer id) {
         this.id = id;

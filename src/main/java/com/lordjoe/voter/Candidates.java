@@ -1,7 +1,9 @@
 package com.lordjoe.voter;
 
-import java.io.IOException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 /**
  * com.lordjoe.voter.Candidates
@@ -23,7 +25,7 @@ public class Candidates {
 
     public static List<Candidate>  getCandidates()
     {
-        List<Candidate>  ret = new ArrayList<>();
+        List<Candidate>  ret = new ArrayList<Candidate>();
         for (Politician politician : Politicians.getPoliticians()) {
              Candidate c = asCandidate(politician);
             if(c != null)

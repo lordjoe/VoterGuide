@@ -1,5 +1,6 @@
 package com.lordjoe.voter.votesmart;
 
+import com.google.appengine.api.datastore.Key;
 import com.lordjoe.voter.QuestionnaireEvidence;
 
 /**
@@ -8,7 +9,7 @@ import com.lordjoe.voter.QuestionnaireEvidence;
  * Date: 7/2/2016
  */
 public class NPRQuestionnaireEvidence extends QuestionnaireEvidence {
-    public NPRQuestionnaireEvidence(String question, String answer) {
-        super(question, answer);
+    public NPRQuestionnaireEvidence(String question, String answer,Key key) {
+        super(question, answer,key);
     }
 }

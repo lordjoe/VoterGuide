@@ -1,17 +1,13 @@
 package com.lordjoe.voter.reader;
 
+import org.jsoup.nodes.Element;
+import org.jsoup.select.Elements;
+
 import java.io.*;
-import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.nodes.Node;
-import org.jsoup.nodes.TextNode;
-import org.jsoup.select.Elements;
 
 /**
  * com.lordjoe.voter.reader.JSoupUtilities
@@ -21,7 +17,7 @@ import org.jsoup.select.Elements;
 public class JSoupUtilities {
 
     public static Map<String, String> parsePropertyTable(Element table) {
-        Map<String, String> ret = new HashMap<>();
+        Map<String, String> ret = new HashMap<String, String>();
         Elements tr = table.select("tr");
         for (Element element : tr) {
             addProperty(ret, element);
@@ -91,6 +87,37 @@ public class JSoupUtilities {
         }
     }
 
+    public static List<String> readInFile(InputStream f) {
+        List<String> ret = new ArrayList<String>();
+        LineNumberReader rdr = null;
+        try {
+            StringBuilder sb = new StringBuilder();
+            String line;
+            rdr = new LineNumberReader(new InputStreamReader(f));
+            line = rdr.readLine();
+            while (line != null) {
+                ret.add(line);
+                line = rdr.readLine();
+            }
+
+            return ret;
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+
+        }
+        finally {
+            if(rdr != null)  {
+                try {
+                    rdr.close();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+
+                }
+            }
+        }
+    }
+
+
     /**
      * VoteSmart loves to comment out data
      * @param in
@@ -102,7 +129,7 @@ public class JSoupUtilities {
     }
 
     public static InputStream fromString(String in)   {
-        return new ByteArrayInputStream(in.getBytes(StandardCharsets.UTF_8));
+        return new ByteArrayInputStream(in.getBytes());
     }
 
     public static void writeFile(String name,String text)   {

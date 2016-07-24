@@ -1,16 +1,19 @@
 package com.lordjoe.voter.votesmart;
 
+import com.google.appengine.api.datastore.Key;
 import com.lordjoe.utilities.CollectionUtilities;
 import com.lordjoe.utilities.DualList;
-import com.lordjoe.utilities.DualMap;
 import com.lordjoe.voter.*;
 import org.votesmart.api.VoteSmartErrorException;
 import org.votesmart.api.VoteSmartException;
 import org.votesmart.classes.RatingClass;
-import org.votesmart.classes.VotesClass;
-import org.votesmart.data.*;
+import org.votesmart.data.Rating;
+import org.votesmart.data.SigRating;
+import org.votesmart.data.Sigs;
 
 import java.util.*;
+
+import static com.lordjoe.voter.votesmart.MyVoteSmart.breakHere;
 
 /**
  * com.lordjoe.voter.votesmart.VoteSmartRating
@@ -19,8 +22,8 @@ import java.util.*;
  */
 public class VoteSmartRating {
     private static  RatingClass rc;
-    private static DualList<InterestGroup, VoteSmartIssueCategory> categoryNameToId = new DualList<>(InterestGroup.class, VoteSmartIssueCategory.class);
-    private static Map<InterestGroup, Map<Politician, InterestGroupRatingEvidence>> groupRatings = new HashMap<>();
+    private static DualList<InterestGroup, VoteSmartIssueCategory> categoryNameToId = new DualList<InterestGroup, VoteSmartIssueCategory>(InterestGroup.class, VoteSmartIssueCategory.class);
+    private static Map<InterestGroup, Map<Politician, InterestGroupRatingEvidence>> groupRatings = new HashMap<InterestGroup, Map<Politician, InterestGroupRatingEvidence>>();
 
     protected static void initIfNeeded() {
         if (rc == null) {
@@ -50,14 +53,18 @@ public class VoteSmartRating {
 
             }
             readCandidateRating();
-            //showInterestGroups();
+            showInterestGroups();
         }
+    }
+
+    public static  Map<Politician, InterestGroupRatingEvidence> getGroupRatings(InterestGroup group)  {
+        return  groupRatings.get(group);
     }
 
     public static void readCandidateRating() {
         for (VoteSmartIssueCategory issue : VoteSmartIssueCategory.values()) {
             Set<InterestGroup> interestGroups = categoryNameToId.reverseValues();
-            for (InterestGroup interestGroup : interestGroups) {
+               for (InterestGroup interestGroup : interestGroups) {
                 guaranteeInterestGroupRatings(interestGroup);
             }
 
@@ -69,7 +76,7 @@ public class VoteSmartRating {
         Map<Politician, InterestGroupRatingEvidence> ratings = groupRatings.get(group);
         if(ratings != null)
             return; // already done
-        ratings =  new HashMap<>() ;
+        ratings =  new HashMap<Politician, InterestGroupRatingEvidence>() ;
         String mostRecentRating = getMostRecentRating(group);
         if(mostRecentRating != null)
             readGroupRating(group,mostRecentRating,ratings);
@@ -82,12 +89,18 @@ public class VoteSmartRating {
         try {
         //    System.out.println(group.name);
             Rating rating = rc.getRating(mostRecentRating);
-            for (Rating.CandidateRating candidateRating : rating.candidateRating) {
+            ArrayList<Rating.CandidateRating> candidateRating1 = rating.candidateRating;
+            if(group.name.equals("National Rifle Association"))
+                breakHere();
+            for (Rating.CandidateRating candidateRating : candidateRating1) {
                 String candidateId = candidateRating.candidateId;
                 String ratingStr = candidateRating.rating;
                 Integer id = Integer.parseInt(candidateId);
                 Politician pol = Politicians.getByID(id);
-                InterestGroupRatingEvidence evidence = new InterestGroupRatingEvidence(group,ratingStr);
+                if(pol == null)
+                    continue;
+                Key key = GoogleDatabase.createKey(group.name,InterestGroupRatingEvidence.class,pol) ;
+                InterestGroupRatingEvidence evidence = new InterestGroupRatingEvidence(group,ratingStr,key);
                 if(evidence != null && pol != null) {
                     ratings.put(pol,evidence);
                 }
@@ -101,12 +114,13 @@ public class VoteSmartRating {
         }
     }
 
-    private static InterestGroupRatingEvidence buildEvidence(InterestGroup group,String ratingStr)
-    {
-         int rating = Integer.parseInt(ratingStr);
-         InterestGroupRatingEvidence ret = new InterestGroupRatingEvidence(group,ratingStr);
-        return ret;
-    }
+//    private static InterestGroupRatingEvidence buildEvidence(InterestGroup group,String ratingStr)
+//    {
+//         int rating = Integer.parseInt(ratingStr);
+//        Key key = PersistentVoterItem.createKey(group.name,InterestGroupRatingEvidence.class,pol) ;
+//        InterestGroupRatingEvidence ret = new InterestGroupRatingEvidence(group,ratingStr);
+//        return ret;
+//    }
 
     private static String getMostRecentRating(InterestGroup group) {
         try {
@@ -133,10 +147,23 @@ public class VoteSmartRating {
     }
 
     public static void showInterestGroups() {
-        for (InterestGroup interestGroup : categoryNameToId.reverseValues()) {
+        List<InterestGroup> groups = new ArrayList<InterestGroup>(categoryNameToId.reverseValues());
+        Collections.sort(groups, new Comparator<InterestGroup>() {
+            @Override
+            public int compare(InterestGroup o1, InterestGroup o2) {
+                return o1.name.compareTo(o2.name);
+            }
+        });
+        for (InterestGroup interestGroup : groups) {
+            Map<Politician, InterestGroupRatingEvidence> ratings = groupRatings.get(interestGroup);
+            if(ratings == null || ratings.size() == 0)
+                continue; // no ratings
+            int numberRatings = ratings.size();
             Set<VoteSmartIssueCategory> voteSmartIssueCategories = categoryNameToId.forwardLookup(interestGroup);
             List<VoteSmartIssueCategory> vc = CollectionUtilities.sortedCollection(voteSmartIssueCategories);
             System.out.print(interestGroup);
+            System.out.print("=>");
+            System.out.print(numberRatings);
             System.out.print("=>");
             for (VoteSmartIssueCategory vcat : vc) {
                 System.out.print(vcat);

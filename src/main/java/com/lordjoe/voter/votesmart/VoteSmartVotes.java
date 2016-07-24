@@ -19,10 +19,10 @@ import java.util.*;
 public class VoteSmartVotes {
 
     private static VotesClass vc;
-    private static DualList<VoteSmartIssueCategory, VoteSmartBill> billsByCategory = new DualList<>(VoteSmartIssueCategory.class, VoteSmartBill.class);
-    private static Map<Integer, VoteSmartBill> billById = new HashMap<>();
-    private static Map<Integer, VoteSmartBill> rollCallBillById = new HashMap<>();
-    private static Map<Integer, VoteSmartBill> badBillById = new HashMap<>();
+    private static DualList<VoteSmartIssueCategory, VoteSmartBill> billsByCategory = new DualList<VoteSmartIssueCategory, VoteSmartBill>(VoteSmartIssueCategory.class, VoteSmartBill.class);
+    private static Map<Integer, VoteSmartBill> billById = new HashMap<Integer, VoteSmartBill>();
+    private static Map<Integer, VoteSmartBill> rollCallBillById = new HashMap<Integer, VoteSmartBill>();
+    private static Map<Integer, VoteSmartBill> badBillById = new HashMap<Integer, VoteSmartBill>();
 
     protected static void initIfNeeded() {
         if (vc != null)
@@ -43,7 +43,7 @@ public class VoteSmartVotes {
     }
 
     private static Set<VoteSmartBill> getBills(VoteSmartIssueCategory category) {
-        Set<VoteSmartBill> ret = new HashSet<>();
+        Set<VoteSmartBill> ret = new HashSet<VoteSmartBill>();
         int end = Integer.parseInt(MyVoteSmart.CURRENT_YEAR);
         int start = Integer.parseInt(MyVoteSmart.FIRST_INTERESTING_YEAR);
         for (int i = start; i < end; i++) {
@@ -97,7 +97,7 @@ public class VoteSmartVotes {
 
     protected static void doFillInBill(VoteSmartBill bill) {
         List<VoteSmartRollCall> rollCalls;
-        rollCalls = new ArrayList<>();
+        rollCalls = new ArrayList<VoteSmartRollCall>();
         try {
             Bill bill1 = vc.getBill(bill.getIdStr());
             for (Bill.Actions.Action action : bill1.actions.action) {

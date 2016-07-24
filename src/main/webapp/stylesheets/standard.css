@@ -1,0 +1,277 @@
+HTML
+{
+    FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 11px;
+    FONT-STYLE: normal
+}
+TD
+{
+    FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 11px;
+    FONT-STYLE: normal
+}
+.td2
+{
+    COLOR: white;
+    FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 20px;
+    FONT-STYLE: normal
+}
+.td3
+{
+    FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 13px;
+    FONT-STYLE: normal
+}
+BODY
+{
+    BACKGROUND-REPEAT: no-repeat 
+}
+.standard
+{
+    COLOR: #000000;
+    FONT-FAMILY: Verdana, Arial, Helvetica, Sans Serif;
+    FONT-SIZE: 11px;
+    HEIGHT: 20px;
+    LINE-HEIGHT: 20px;
+    PADDING-BOTTOM: 20px;
+    TEXT-DECORATION: none
+}
+.lrgtextwhite
+{
+    COLOR: #ffffff;
+    FONT-FAMILY: Tahoma, Arial, Helvetica, Sans Serif;
+    FONT-SIZE: 12px;
+    TEXT-DECORATION: none
+}
+.lrgtextblack
+{
+    COLOR: #000000;
+    FONT-FAMILY: Tahoma, Arial, Helvetica, Sans Serif;
+    FONT-SIZE: 12px;
+    TEXT-DECORATION: none
+}
+.header
+{
+    COLOR: #000000;
+    FONT-FAMILY: Arial, Helvetica, sans-serif;
+    FONT-SIZE: 16px;
+    FONT-WEIGHT: bold
+}
+A
+{
+    COLOR: #0000ff;
+    TEXT-DECORATION: underline
+}
+A:link
+{
+    COLOR: #0000ff;
+    TEXT-DECORATION: underline
+}
+A:visited
+{
+    COLOR: #0000ff;
+    TEXT-DECORATION: underline
+}
+A:hover
+{
+    COLOR: #0000ff;
+    TEXT-DECORATION: underline
+}
+A.DSL
+{
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial,Helvetica, sans-serif;
+    FONT-SIZE: 7pt;
+    TEXT-DECORATION: none
+}
+A.DSL:visited
+{
+    COLOR: #ffffff;
+    TEXT-DECORATION: none
+}
+A.DSL:hover
+{
+    COLOR: #ffffff;
+    TEXT-DECORATION: none
+}
+A.ESL
+{
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial,Helvetica, sans-serif;
+    FONT-SIZE: 8pt;
+    TEXT-DECORATION: none
+}
+A.ESL:visited
+{
+    COLOR: #ffffff;
+    TEXT-DECORATION: none
+}
+A.ESL:hover
+{
+    COLOR: #ffffff;
+    TEXT-DECORATION: none
+}
+A.FSL
+{
+    COLOR: blue;
+    FONT-FAMILY: Arial,Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: normal;
+    TEXT-DECORATION: none
+}
+A.FSL:visited
+{
+    COLOR: purple;
+    TEXT-DECORATION: none
+}
+A.FSL:hover
+{
+    COLOR: #ff3300;
+    TEXT-DECORATION: none
+}
+A.GSL
+{
+    COLOR: #ffffff;
+    FONT-FAMILY: Arial,Helvetica, sans-serif;
+    FONT-SIZE: 8pt;
+    FONT-STYLE: normal;
+    TEXT-DECORATION: none
+}
+A.GSL:visited
+{
+    COLOR: #ffffff;
+    TEXT-DECORATION: none
+}
+A.GSL:hover
+{
+    COLOR: #000000;
+    TEXT-DECORATION: none
+}
+.BTN
+{
+	BACKGROUND: #D52B1D;
+    BORDER-BOTTOM: #104a7b 1px solid;
+    BORDER-LEFT: #afc4d5 1px solid;
+    BORDER-RIGHT: #104a7b 1px solid;
+    BORDER-TOP: #afc4d5 1px solid;
+    COLOR: #ffffff;
+    CURSOR: hand;
+    FONT-FAMILY: Arial,Helvetica, sans-serif;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bold;
+    WIDTH: 110px;
+    MARGIN-BOTTOM: 2px;
+    MARGIN-TOP: 2px;
+}
+.BTN2
+{
+    BACKGROUND: #636563; 
+    BORDER-BOTTOM: #104a7b 1px solid;
+    BORDER-LEFT: #afc4d5 1px solid;
+    BORDER-RIGHT: #104a7b 1px solid;
+    BORDER-TOP: #afc4d5 1px solid;
+    COLOR: #ffffff;
+    CURSOR: hand;
+    FONT-FAMILY: Arial,Helvetica, sans-serif;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bold;
+    WIDTH: 100px
+}
+.BTN3
+{
+    BACKGROUND: #B596C6; 
+    BORDER-BOTTOM: #104a7b 1px solid;
+    BORDER-LEFT: #afc4d5 1px solid;
+    BORDER-RIGHT: #104a7b 1px solid;
+    BORDER-TOP: #afc4d5 1px solid;
+    COLOR: #ffffff;
+    CURSOR: hand;
+    FONT-FAMILY: Arial,Helvetica, sans-serif;
+    FONT-SIZE: 8pt;
+    FONT-WEIGHT: bold;
+    WIDTH: 100px
+}
+A.BSL
+{
+    COLOR: black;
+    CURSOR: hand;
+    FONT-FAMILY: Webdings;
+    FONT-SIZE: 14pt;
+    TEXT-DECORATION: none
+}
+A.BSL:hover
+{
+    COLOR: black;
+    CURSOR: hand;
+    FONT-FAMILY: Webdings;
+    FONT-SIZE: 14pt;
+    TEXT-DECORATION: none
+}
+A.BUY
+{
+    text-decoration: none;
+    font-size: 11px;
+    font-family: Tahoma;
+    font-weight: bold;
+    color: black;
+}
+A.BUY:hover
+{
+    text-decoration: none;
+    font-size: 11px;
+    font-family: Tahoma;
+    font-weight: bold;
+    color: black;
+}
+A.BUY:visited
+{
+    text-decoration: none;
+    font-size: 11px;
+    font-family: Tahoma;
+    font-weight: bold;
+    color: black;
+}
+A.SORT
+{
+	text-decoration : none;
+	font-size : 11px;
+	font-family : Tahoma;
+	font-weight : bold;
+	color : white;
+}
+A.SORT:hover
+{
+	text-decoration : none;
+	font-size : 11px;
+	font-family : Tahoma;
+	font-weight : bold;
+	color : white;
+}
+A.SORT:visited
+{
+	text-decoration : none;
+	font-size : 11px;
+	font-family : Tahoma;
+	font-weight : bold;
+	color : white;
+}
+
+SELECT
+{
+    FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 11px;
+    FONT-STYLE: normal
+}
+INPUT
+{
+    FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 11px;
+    FONT-STYLE: normal
+}
+TEXTAREA
+{
+    FONT-FAMILY: Tahoma, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 11px;
+    FONT-STYLE: normal
+}

@@ -8,16 +8,19 @@ package com.lordjoe.voter;
 public enum IssueCategory {
     Budget,
     Campaign_Finance,
+    Crime,
     Economy,
     Education,
-    Environmant,
+    Environment,
     Gay_Marriage,
     Gun_Control,
     Healthcare,
     Immigration,
-    Social_Issues,
     Iraq,
-    Taxes ;
+    Social_Issues,
+    Supreme_Court,
+    Taxes,
+    Voting_Rights;
 
     public static IssueCategory fromString(String s) {
         return valueOf(s.replace(" ","_"));

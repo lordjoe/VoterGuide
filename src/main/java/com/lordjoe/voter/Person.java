@@ -1,15 +1,20 @@
 package com.lordjoe.voter;
 
+import com.google.appengine.api.datastore.Entity;
+import com.google.appengine.api.datastore.Key;
+import com.sun.javafx.beans.annotations.NonNull;
+
 /**
  * com.lordjoe.voter.Person
  * User: Steve
  * Date: 6/24/2016
  */
-public class Person implements Comparable<Person> {
-    private final String firstName;
-    private final String lastName;   // might be null - unknown for children, wives
+public class Person extends PersistentVoterItem implements Comparable<Person> {
+    private   String firstName;
+    private   String lastName;   // might be null - unknown for children, wives
 
-    public Person(String firstName, String lastName) {
+    public Person(String firstName, String lastName, Key key) {
+        super(key);
         this.firstName = firstName;
         this.lastName = lastName;
     }
@@ -57,5 +62,16 @@ public class Person implements Comparable<Person> {
         int ret = lastName.compareTo(o.lastName);
         if(ret != 0) return ret;
         return firstName.compareTo(o.firstName);
+    }
+
+    @Override
+    public Entity asEntity() {
+        throw new UnsupportedOperationException("Fix This"); // ToDo
+    }
+
+    @Override
+    public void populateFromEntity(@NonNull Entity e) {
+        firstName = (String)e.getProperty("firstName");
+        lastName = (String)e.getProperty("lastName");
     }
 }

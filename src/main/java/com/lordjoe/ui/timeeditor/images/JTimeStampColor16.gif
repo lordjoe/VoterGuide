@@ -1,0 +1,32 @@
+# @(#)Notepad.properties	1.5 99/07/12
+#
+# Resource strings for Notepad example
+
+Status\:\ =\u0421\u0442\u0430\u0442\u0443\u0441:\ 
+Elements\ that\ make\ up\ the\ current\ document=\u042d\u043b\u0435\u043c\u0435\u043d\u0442\u044b, \u041e\u0431\u0440\u0430\u0437\u0443\u044e\u0449\u0438\u0435 \u0442\u0435\u043a\u0443\u0449\u0443\u044e \u043c\u043e\u0434\u0435\u043b\u044c
+Title=Notepad
+ElementTreeFrameTitle=Elements
+ViewportBackingStore=false
+
+# menubar definition
+#
+# Each of the strings that follow form a key to be 
+# used to the actual menu definition.
+menubar=file edit debug
+
+# file Menu definition
+#
+# Each of the strings that follow form a key to be
+# used as the basis of a menu item definition.
+#
+# open ->  Notepad.openAction
+# new  ->  Notepad.newAction
+# save ->  Notepad.saveAction
+# exit ->  Notepad.exitAction
+file=new open save - exit
+fileLabel=\u0424\u0430\u0439\u043b
+openLabel=\u041e\u0442\u043a\u0440\u044b\u0442\u044c
+openImage=resources/open.gif
+newLabel=\u041d\u043e\u0432\u044b\u0439
+newImage=resources/new.gif
+saveLabel=
